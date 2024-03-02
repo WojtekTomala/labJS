@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <!--
+        - Utwórz w html cztery pola tekstowe i przycisk "Przelicz"
+        - Po naciśnięciu "Przelicz" pokaż na stronie sumę, średnią, min i max z wartości wpisanych do pól tekstowych.
+    -->
+    <div class="first-task-container">
+        <form id="simple-form">
+        </form>
+        <button>Submit</button>
+    </div>
+
+    <div id="results-container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Sum</td>
+                <td id="sum-result"></td>
+            </tr>
+            <tr>
+                <td>Avg</td>
+                <td id="avg-result"></td>
+            </tr>
+            <tr>
+                <td>Min</td>
+                <td id="min-result"></td>
+            </tr>
+            <tr>
+                <td>Max</td>
+                <td id="max-result"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

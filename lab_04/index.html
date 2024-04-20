@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <section class="note-app-header">
+            <h1>My notes</h1>
+            <button id="open-modal-btn">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </section>
+        <section class="note-list">
+            <div class="note">
+                <div class="note-content">
+                    <h3><span id="note-id">1.</span> <span id="note-title">My first note</span></h3>
+                    <p id="note-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit veritatis quas, atque, reprehenderit dolore temporibus repellendus, facere officiis tempore similique illo esse nesciunt eligendi soluta! Asperiores distinctio quibusdam illo perferendis.</p>
+                    <div class="note-tags">
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
+                        <span>Tag 3</span>
+                    </div>
+                </div>
+                <div class="edit-note-btn-container">
+                    <button>
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="add-note-modal-wrapper hidden">
+        <div class="add-note-container">
+            <div class="add-note-header">
+                <h2>Add note</h2>
+                <button class="close-modal-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <form id="note-form">
+                <input type="text" name="title" id="title" placeholder="Title...">
+                <textarea placeholder="Description..." name="description" id="description" cols="30" rows="10"></textarea>
+                <label for="color">Pick note color:</label>
+                <input type="color" name="color" id="color">
+                <div class="checkbox-container">
+                    <input type="checkbox" name="pin" id="pin">
+                    <label for="pin">Pin</label>
+                </div>
+                <div class="buttons-container">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

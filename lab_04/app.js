@@ -59,7 +59,6 @@ function createNewNote({title, description, tags, color, eventDate, pin, remind,
     };
     notes.push(newNote);
     saveNotes();
-    console.log('New note added:', newNote);
     fetchNotes();
 }
 
@@ -90,7 +89,6 @@ function fetchNotes(query = '') {
     noteRemindList.innerHTML = '';
     noteDoneList.innerHTML = '';
     const filteredNotes = notes.filter(note => {
-        console.log(note);
         const lowerCaseTitle = note.title.toLowerCase();
         const lowerCaseDesc = note.desc.toLowerCase();
         const lowerCaseTags = note.tags.map(tag => tag.toLowerCase());
@@ -98,7 +96,6 @@ function fetchNotes(query = '') {
         return lowerCaseTitle.includes(query) || lowerCaseDesc.includes(query) || lowerCaseTags.some(tag => tag.includes(query));
     });
 
-    // Sort notes so that pinned notes appear first
     filteredNotes.sort((a, b) => b.pin - a.pin);
 
     filteredNotes.forEach(note => {
@@ -150,8 +147,7 @@ function fetchNotes(query = '') {
         // ADD BOTH:
         noteContainer.append(noteContent, editNoteContainer);
         const todaysDate = new Date();
-        console.log(note.remind)
-        console.log(isSameDate(new Date(note.eventDate), todaysDate))
+
         if(note.remind && isSameDate(new Date(note.eventDate), todaysDate)){
             noteRemindList.appendChild(noteContainer);
         }
@@ -195,5 +191,4 @@ function isSameDate(date1, date2) {
     return date1.getFullYear() === date2.getFullYear() && date1.getMonth() === date2.getMonth() && date1.getDate() === date2.getDate();
 }
 
-// Initial fetch to display notes on page load
 fetchNotes();

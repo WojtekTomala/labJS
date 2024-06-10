@@ -11,32 +11,62 @@
 <body>
     <main>
         <section class="note-app-header">
-            <h1>My notes</h1>
+            <div>
+                <h1>My notes:</h1>
+                <input type="text" id="search" style="margin-top: 10px; padding: 10px; background-color: #EEE; border: none" placeholder="Search:">
+            </div>
             <button id="open-modal-btn">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </section>
-        <section class="note-list">
-            <div class="note">
-                <div class="note-content">
-                    <h3><span id="note-id">1.</span> <span id="note-title">My first note</span></h3>
-                    <p id="note-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit veritatis quas, atque, reprehenderit dolore temporibus repellendus, facere officiis tempore similique illo esse nesciunt eligendi soluta! Asperiores distinctio quibusdam illo perferendis.</p>
-                    <div class="note-tags">
-                        <span>Tag 1</span>
-                        <span>Tag 2</span>
-                        <span>Tag 3</span>
-                    </div>
-                </div>
-                <div class="edit-note-btn-container">
-                    <button>
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button>
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </div>
+
+        <section class="note-app-header" style="margin-top: 10px;">
+            <div>
+                <h1>Reminder:</h1>
             </div>
         </section>
+        <section class="note-remind-list" style="border: 3px dotted red; border-radius: 5px; min-height: 100px; padding: 10px; box-sizing: border-box; margin-top: 10px;">
+
+        </section>
+
+        <section class="note-app-header" style="margin-top: 10px;">
+            <div>
+                <h1>All:</h1>
+            </div>
+        </section>
+
+        </section>
+        <section class="note-list">
+            <!-- 
+                NOTE SCHEMA:
+                <div class="note">
+                    <div class="note-content">
+                        <h3><span id="note-id">1.</span> <span id="note-title">My first note</span></h3>
+                        <p id="note-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit veritatis quas, atque, reprehenderit dolore temporibus repellendus, facere officiis tempore similique illo esse nesciunt eligendi soluta! Asperiores distinctio quibusdam illo perferendis.</p>
+                        <div class="note-tags">
+                            <span>Tag 1</span>
+                            <span>Tag 2</span>
+                            <span>Tag 3</span>
+                        </div>
+                    </div>
+                    <div class="edit-note-btn-container">
+                        <button>
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div> 
+            -->
+        </section>
+
+        <section class="note-app-header" style="margin-top: 10px;">
+            <div>
+                <h1>Done:</h1>
+            </div>
+        </section>
+        <section class="note-done-list" style="border: 3px dotted rgb(63, 168, 63); border-radius: 5px; min-height: 100px; padding: 10px; box-sizing: border-box; margin-top: 10px;">
     </main>
 
     <div class="add-note-modal-wrapper hidden">
@@ -52,10 +82,22 @@
                 <textarea placeholder="Description..." name="description" id="description" cols="30" rows="10"></textarea>
                 <label for="color">Pick note color:</label>
                 <input type="color" name="color" id="color">
+                <label for="tags">Tags (separate with comma):</label>
+                <input type="text" name="tags" id="tags">
                 <div class="checkbox-container">
                     <input type="checkbox" name="pin" id="pin">
                     <label for="pin">Pin</label>
                 </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="remind" id="remind">
+                    <label for="remind">Remind</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="done" id="done">
+                    <label for="done">Done</label>
+                </div>
+                <label for="start">Event date:</label>
+                <input type="date" id="eventDate" name="eventDate"/>
                 <div class="buttons-container">
                     <input type="reset" value="Reset">
                     <input type="submit" value="Submit">

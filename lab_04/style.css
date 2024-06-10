@@ -77,17 +77,19 @@ form input:focus, form textarea:focus{
 .hidden{
     display: none;
 }
-.note-list{
+.note-list, .note-remind-list{
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+    height: auto;
 }
 .note{
     padding: 10px;
     background-color: #eee;
     border-radius: 10px;
     display: flex;
+    flex-shrink: 0;
 }
 .edit-note-btn-container{
     display: flex;
@@ -110,6 +112,7 @@ form input:focus, form textarea:focus{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 .note-tags{
     display: flex;

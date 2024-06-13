@@ -5,5 +5,5 @@
 - LAB 03
 - LAB 04
 - LAB -
-- LAB -
+- LAB 06
 - LAB -

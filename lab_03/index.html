@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 03</title>
 	<script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <audio src="./sounds/clap.wav" controls data-key="a" data-volume="40" id="s1"></audio>
-    <audio src="./sounds/kick.wav" controls data-key="s" id="s2"></audio>
-    <audio src="./sounds/hihat.wav" controls data-key="d" id="s3"></audio>
+    <main>
+        <div class="controls">
+            <button id="metronom-toggle">Metronom</button>
+            <input type="number" id="bpm" value="120"> Frequency
+            <button id="add-channel">Add Channel</button>
+        </div>
+
+        <div class="sound-buttons-container">
+            <div class="sound-button Q" data-key="Q">Q</div>
+            <div class="sound-button W" data-key="W">W</div>
+            <div class="sound-button E" data-key="E">E</div>
+            <div class="sound-button R" data-key="R">R</div>
+            <div class="sound-button T" data-key="T">T</div>
+            <div class="sound-button Y" data-key="Y">Y</div>
+            <div class="sound-button U" data-key="U">U</div>
+            <div class="sound-button I" data-key="I">I</div>
+            <div class="sound-button O" data-key="O">O</div>
+        </div>
     
+        <div class="channels"></div>
+    </main>
 </body>
 </html>

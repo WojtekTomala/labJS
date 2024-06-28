@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+canvas {
+    background-color: #F5F5F5;
+}
+#controls {
+    margin-top: 10px;
+}
+input, button, select{
+    padding: 10px 15px;
+    border: none;
+    background: #EEE;
+}
